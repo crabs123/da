@@ -19,12 +19,12 @@ platform :ios do
     )
 
     install_provisioning_profile(
-      path: "../dhp.mobileprovision"
+      path: "./dhp.mobileprovision"
     )
 
     import_certificate(
       keychain_name: "keychain",
-      certificate_path: "../certificates.p12",
+      certificate_path: "./certificates.p12",
       keychain_password: "1234",
       certificate_password: "1234"
     )
@@ -34,7 +34,7 @@ platform :ios do
   lane :buildApp do
     build_app(
         scheme: "PatientApp",
-        workspace: "PatientApp.xcworkspace",
+        workspace: "./ios/PatientApp.xcworkspace",
         export_method: 'enterprise',
         clean: true,
         xcargs: "CODE_SIGN_STYLE=Manual",
