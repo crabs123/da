@@ -7,28 +7,28 @@ platform :ios do
     # add actions here: https://docs.fastlane.tools/actions
   end
 
-  desc "Signing"
-  lane :signing do
-    create_keychain(
-      name: "keychain",
-      default_keychain: true,
-      unlock: true,
-      timeout: 3600,
-      lock_when_sleeps: true,
-      password: "1234"
-    )
-
-    install_provisioning_profile(
-      path: "./dhp.mobileprovision"
-    )
-
-    import_certificate(
-      keychain_name: "keychain",
-      certificate_path: "./certificates.p12",
-      keychain_password: "1234",
-      certificate_password: "1234"
-    )
-  end
+  #desc "Signing"
+  #lane :signing do
+  #  create_keychain(
+  #    name: "keychain",
+  #    default_keychain: true,
+  #    unlock: true,
+  #    timeout: 3600,
+  #    lock_when_sleeps: true,
+  #    password: "1234"
+  #  )
+#
+  #  install_provisioning_profile(
+  #    path: "./dhp.mobileprovision"
+  #  )
+#
+  #  import_certificate(
+  #    keychain_name: "keychain",
+  #    certificate_path: "./certificates.p12",
+  #    keychain_password: "1234",
+  #    certificate_password: "1234"
+  #  )
+  #end
 
   desc "build app"
   lane :buildApp do
