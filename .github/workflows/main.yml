@@ -38,7 +38,6 @@ jobs:
 
     - name: check fastlane
       run: |
-        cd ios
         bundle update
         pwd
         ls -a
@@ -48,7 +47,6 @@ jobs:
         ls ../../
         echo 3
         ls ../../../
-        cd ..
         bundle exec fastlane do_all_lane
         ls -a 
         echo "1111"
