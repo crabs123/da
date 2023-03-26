@@ -16,7 +16,7 @@
     "postinstall": "patch-package && npx typesync",
     "asset": "npx react-native-asset",
     "pod": "pod install --project-directory=ios",
-    "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./ios/main.jsbundle' --dev=false --platform='ios'",
+    "build:ios": "react-native bundle --entry-file='index.js' --bundle-output='./main.jsbundle' --dev=false --platform='ios'",
     "push-ios": "appcenter codepush release-react -a tranvantai.tvt141/Patient_app -d Staging",
     "push-android": "appcenter codepush release-react -a tranvantai.tvt141/Patient_app_android -d Staging",
     "port": "react-native start --port 9988"
