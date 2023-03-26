@@ -48,6 +48,7 @@ jobs:
         ls ../../
         echo 3
         ls ../../../
+        cd ..
         bundle exec fastlane do_all_lane
         ls -a 
         echo "1111"
