@@ -1,0 +1,12 @@
+diff --git a/node_modules/react-native-gifted-charts/src/LineChart/index.tsx b/node_modules/react-native-gifted-charts/src/LineChart/index.tsx
+index 8ef5ecc..87c2f79 100644
+--- a/node_modules/react-native-gifted-charts/src/LineChart/index.tsx
++++ b/node_modules/react-native-gifted-charts/src/LineChart/index.tsx
+@@ -3742,6 +3742,7 @@ export const LineChart = (props: propTypes) => {
+       {props.hideAxesAndRules !== true && renderHorizSections()}
+       {/* {sectionsOverlay()} */}
+       <ScrollView
++        scrollEventThrottle={16}
+         horizontal
+         contentContainerStyle={[
+           {

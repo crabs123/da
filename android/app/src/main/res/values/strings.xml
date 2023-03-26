@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">PatientApp</string>
+    <string moduleConfig="true" name="CodePushDeploymentKey">b_1y6ytTLEazGa-nDt4oJBBDFL-1B3LCWgS47</string>
+</resources>

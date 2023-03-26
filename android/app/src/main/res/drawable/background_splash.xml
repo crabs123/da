@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:drawable="@color/splashscreen_bg"/>
+        
+    <!--
+        calculate the ratio of the logo,
+        get info of width, height on logo image,
+        then modify here to keep the ratio
+    -->
+    <item
+        android:width="250dp"
+        android:height="250dp"
+        android:drawable="@mipmap/splash_icon"
+        android:gravity="center" />
+
+</layer-list>

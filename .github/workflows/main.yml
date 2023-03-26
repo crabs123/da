@@ -1,0 +1,56 @@
+name: IOS build
+
+on:
+  push:
+    branches:
+      #- "main" 
+      - "master"
+      - "integrate/**"
+
+jobs:
+#  build_android:
+#    name: build android
+#    runs-on: ubuntu-latest
+#    steps:
+#    - name: Checkout Code
+#      uses: actions/checkout@v2
+#
+#    - name: install android
+#      run: |
+#        npm install --force
+#        cd android
+#        chmod a+x gradlew
+#        yarn clean-android 
+#        yarn build-android
+
+  build_ios:
+    name: Build IOS App
+    runs-on: macos-latest
+    steps:  
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: install pod
+      run: |
+        cd ios
+        yarn
+        yarn pod
+
+    - name: check fastlane
+      run: |
+        cd ios
+        bundle update
+        pwd
+        ls -a
+        echo 1
+        ls ../
+        echo 2
+        ls ../../
+        echo 3
+        ls ../../../
+        bundle exec fastlane do_all_lane
+        ls -a 
+        echo "1111"
+        ls -a ../
+        echo "2222"
+        ls -a ../../
