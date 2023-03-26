@@ -3,7 +3,7 @@ name: IOS build
 on:
   push:
     branches:
-      #- "main" 
+      - "main" 
       - "master"
       - "integrate/**"
 
