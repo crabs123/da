@@ -58,7 +58,7 @@ platform :ios do
 
   desc "do all lane above"
   lane :do_all_lane  do
-    signing
+    #signing
     buildApp
   end
 end
